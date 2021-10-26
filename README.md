@@ -1,5 +1,6 @@
 # Hamsda's OOT pack + Autotracking
 
+![Hamsda version](https://img.shields.io/badge/base-3.6.0.0-blue)
 ![Test Status](https://github.com/coavins/EmoTrackerPacks/workflows/tests/badge.svg)
 
 This fork introduces autotracking functionality to the OOT map and item tracker maintained by [Hamsda](https://github.com/Hamsda) for [EmoTracker](https://emotracker.net/). Please refer to the [upstream repository](https://github.com/Hamsda/EmoTrackerPacks) or [pack README](ootrando_overworldmap_hamsda/README.md) for any questions regarding the usage or behavior of the standard tracker features.
