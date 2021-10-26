@@ -1,6 +1,6 @@
-# Autotracker by coavins
+# Hamsda's OOT pack + Autotracking
 
-This repository contains packs maintained by [Hamsda](https://github.com/Hamsda) for [EmoTracker](https://emotracker.net/), with autotracking functionality added in. Please refer to the [upstream repository](https://github.com/Hamsda/EmoTrackerPacks) or [pack README](ootrando_overworldmap_hamsda/README.md) for any questions regarding the usage or behavior of the standard tracker features.
+This fork introduces autotracking functionality to the OOT map and item tracker maintained by [Hamsda](https://github.com/Hamsda) for [EmoTracker](https://emotracker.net/). Please refer to the [upstream repository](https://github.com/Hamsda/EmoTrackerPacks) or [pack README](ootrando_overworldmap_hamsda/README.md) for any questions regarding the usage or behavior of the standard tracker features.
 
 There is an **[active pull request](https://github.com/Hamsda/EmoTrackerPacks/pull/123)** to officially merge this work into Hamsda's pack. Please show support by giving a `+1` if you want to see this happen!
 
