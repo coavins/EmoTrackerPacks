@@ -1,7 +1,9 @@
 # Hamsda's OOT pack + Autotracking
 
-![Hamsda version](https://img.shields.io/badge/base-3.6.0.0-blue)
-![Test Status](https://github.com/coavins/EmoTrackerPacks/workflows/tests/badge.svg)
+### [Download latest .zip](https://github.com/coavins/EmoTrackerPacks/raw/master/ootrando_overworldmap_hamsda_coavins.zip)
+
+[![Hamsda version](https://img.shields.io/badge/base-3.6.0.0-blue)](https://github.com/Hamsda/EmoTrackerPacks/releases)
+[![Test Status](https://github.com/coavins/EmoTrackerPacks/workflows/tests/badge.svg)](https://github.com/coavins/EmoTrackerPacks/actions)
 
 This fork introduces autotracking functionality to the OOT map and item tracker maintained by [Hamsda](https://github.com/Hamsda) for [EmoTracker](https://emotracker.net/). Please refer to the [upstream repository](https://github.com/Hamsda/EmoTrackerPacks) or [pack README](ootrando_overworldmap_hamsda/README.md) for any questions regarding the usage or behavior of the standard tracker features.
 
@@ -43,7 +45,7 @@ To manually install or update this pack, simply copy [the zip file](https://gith
 
 `C:\Users\coavins\Documents\EmoTracker\packs`
 
-When EmoTracker is reloaded, it should appear under "Installed Packages" alongside Hamsda's pack, with (Autotracker) in the name.
+You don't have to extract the zip. When EmoTracker is reloaded, it should appear under "Installed Packages" alongside Hamsda's pack, with (Autotracker) in the name.
 
 ## Connect to Bizhawk
 
