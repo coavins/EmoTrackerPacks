@@ -49,7 +49,7 @@ You don't have to extract the zip. When EmoTracker is reloaded, it should appear
 
 ## Connect to Bizhawk
 
-In order to use the autotracker, you will first need to turn off race mode in the settings.
+In order to use the autotracker, you will first need to turn off race mode. This is done by clicking on the icon in the center of the item grid.
 
 ![Fun](ootrando_overworldmap_hamsda/images/setting_racemode_off.png "Fun"): When this setting is used, the autotracker will operate normally.
 
