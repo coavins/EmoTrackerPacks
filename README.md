@@ -49,11 +49,11 @@ You don't have to extract the zip. When EmoTracker is reloaded, it should appear
 
 ## Connect to Bizhawk
 
-In order to use the autotracker, you will first need to turn off race mode. This is done by clicking on the icon in the center of the item grid.
+In order to use the autotracker, race mode must be turned off. This is done by clicking on the icon in the center of the item grid.
 
-![Fun](ootrando_overworldmap_hamsda/images/setting_racemode_off.png "Fun"): When this setting is used, the autotracker will operate normally.
+![Casual](ootrando_overworldmap_hamsda/images/setting_racemode_off.png "Casual") When this setting is used, the autotracker will operate normally.
 
-![Race](ootrando_overworldmap_hamsda/images/setting_racemode_on.png "Race"): When this setting is used, the autotracker will not take any action even after it's connected.
+![Race](ootrando_overworldmap_hamsda/images/setting_racemode_on.png "Race") When this setting is used, the autotracker will not take any action even after it's connected.
 
 To activate the autotracker, right-click the robot icon in the lower right corner and choose "SNES", then "Lua". When the robot turns red or yellow, it is ready and waiting for you to start the connector.lua script in Bizhawk. For me, this was under Program files:
 
@@ -63,7 +63,7 @@ When the connector.lua script is started, the connection should be established a
 
 ## Racing
 
-**Please be mindful of the rules when joining races.** If you use an autotracker in a race where they are not permitted, even by accident, you would be cheating. Always remember to double check the rules to ensure autotracking is allowed before using it in a race. Race mode is enabled by default in the tracker to help remind you of this.
+**Please be mindful of the rules when joining races.** If you use an autotracker in a race where they are not permitted, even by accident, you would be cheating. Always remember to check the rules to confirm your tracker is allowed before using it in any race, even if the autotracking function is turned off.
 
 This pack can only mark off items after they are received, and checks after they have been checked. It cannot be used to reveal information that is not already known to the player, including where items are hidden or what random settings have been applied.
 
