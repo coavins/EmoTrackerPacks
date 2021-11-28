@@ -34,7 +34,7 @@ local function updatePlantedBeanFromDataAndFlags(data, code, flags)
     table.insert(BEANS_USED, code)
 
     -- if bean plant is set to NOT
-    if has("setting_plant_no") then
+    if not BEAN_PLANTING then
       autotracker_debug('bean planting set to NOT', DBG_DETAIL)
       -- live read held beans
       local held = LiveReadU8(0x8011A66A)
@@ -118,7 +118,7 @@ local function updateUsedKeysFromDataAndFlags(data, code, flags)
     elseif code == 'shadowsmall' then heldAddress = 0x8011A693
     elseif code == 'botwsmall'   then heldAddress = 0x8011A694
     elseif code == 'gtgsmall'    then heldAddress = 0x8011A697
-    elseif code == 'gfsmall'     then heldAddress = 0x8011A698
+    elseif code == 'thsmall'     then heldAddress = 0x8011A698
     elseif code == 'gcsmall'     then heldAddress = 0x8011A699
     end
 

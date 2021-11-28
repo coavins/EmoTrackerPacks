@@ -430,7 +430,7 @@ local function updateBeanCountFromByte(segment, code, address)
   if item then
     local value = ReadU8(segment, address)
 
-    if has('setting_plant_no') then
+    if not BEAN_PLANTING then
       -- only update if it increased - see plant check for the accurate count
       if item.AcquiredCount < value then
         autotracker_debug(string.format("%d %s", value, item.Name))
@@ -673,7 +673,7 @@ function updateKeysFromMemorySegment(segment)
     updateSmallKeysFromByte(segment, "shadowsmall"       , 0x8011A693)
     updateSmallKeysFromByte(segment, "botwsmall"         , 0x8011A694)
     updateSmallKeysFromByte(segment, "gtgsmall"          , 0x8011A697)
-    updateSmallKeysFromByte(segment, "gfsmall"           , 0x8011A698)
+    updateSmallKeysFromByte(segment, "thsmall"           , 0x8011A698)
     updateSmallKeysFromByte(segment, "gcsmall"           , 0x8011A699)
   end
 
