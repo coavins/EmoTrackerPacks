@@ -51,7 +51,7 @@ When starting a new game, you should make sure that your tracker settings are co
 
 ## Manual install
 
-To manually install or update this pack, simply copy [the zip file](https://github.com/coavins/EmoTrackerPacks/raw/master/ootrando_overworldmap_hamsda_coavins.zip) into your EmoTracker packs directory. For me, this was in my Users folder:
+To manually install or update this pack, simply copy [the zip file](https://github.com/coavins/EmoTrackerPacks/releases) into your EmoTracker packs directory. For me, this was in my Users folder:
 
 `C:\Users\coavins\Documents\EmoTracker\packs`
 
