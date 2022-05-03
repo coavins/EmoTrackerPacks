@@ -2,7 +2,7 @@
 
 ### [Download latest .zip](https://github.com/coavins/EmoTrackerPacks/raw/master/ootrando_overworldmap_hamsda_coavins.zip)
 
-[![Hamsda version](https://img.shields.io/badge/base-3.7.0.0-blue)](https://github.com/Hamsda/EmoTrackerPacks/releases)
+[![Hamsda version](https://img.shields.io/badge/base-3.7.2.0-blue)](https://github.com/Hamsda/EmoTrackerPacks/releases)
 [![Test Status](https://github.com/coavins/EmoTrackerPacks/workflows/tests/badge.svg)](https://github.com/coavins/EmoTrackerPacks/actions)
 
 This fork introduces autotracking functionality to the OOT map and item tracker maintained by [Hamsda](https://github.com/Hamsda) for [EmoTracker](https://emotracker.net/). Please refer to the [upstream repository](https://github.com/Hamsda/EmoTrackerPacks) or [pack README](ootrando_overworldmap_hamsda/README.md) for any questions regarding the usage or behavior of the standard tracker features.
@@ -10,6 +10,15 @@ This fork introduces autotracking functionality to the OOT map and item tracker 
 There is an **[active pull request](https://github.com/Hamsda/EmoTrackerPacks/pull/123)** to officially merge this work into Hamsda's pack. Please show support by giving it a 👍 if you want to see this happen!
 
 Huge thanks to [RiptideSage](https://github.com/RiptideSage) for making this project possible.
+
+## Supported versions
+
+This pack was tested and known to work with the following software:
+
+- EmoTracker 2.3.8.16
+- The connector.lua included with EmoTracker 2.3.8.16
+- BizHawk 2.3.0 (x64) commit af9d1db
+- Archipelago Ocarina of Time Client 0.3.1
 
 ## Contact
 
@@ -64,16 +73,6 @@ The autotracker will only function when casual mode is enabled. This setting can
 **Please be mindful of the rules when joining races.** Using an autotracker in a race where they are not permitted would be cheating. Always remember to check the rules to confirm that your tracker is allowed before using it in any race, even if you don't intend to use autotracking.
 
 This pack can only mark off items after they are received, and checks after they have been checked. It cannot be used to reveal information that is not already known to the player, including where items are hidden or what random settings have been applied.
-
-## Supported versions
-
-This pack was tested and known to work with the following software:
-
-- EmoTracker 2.3.8.14
-- The connector.lua included with EmoTracker 2.3.8.14
-- BizHawk 2.3.0 (x64) commit af9d1db
-- Archipelago 0.1.9
-- Archipelago Z5Client 0.12.0
 
 ## Special thanks
 
