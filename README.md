@@ -5,9 +5,13 @@
 [![Current version](https://img.shields.io/badge/version-3.7.2.0-blue)](https://github.com/coavins/EmoTrackerPacks/releases)
 [![Test Status](https://github.com/coavins/EmoTrackerPacks/workflows/tests/badge.svg)](https://github.com/coavins/EmoTrackerPacks/actions)
 
-This fork introduces autotracking functionality to the OOT map and item tracker maintained by [Hamsda](https://github.com/Hamsda) for [EmoTracker](https://emotracker.net/). Please refer to the [upstream repository](https://github.com/Hamsda/EmoTrackerPacks) or [pack README](ootrando_overworldmap_hamsda/README.md) for any questions regarding the usage or behavior of the standard tracker features.
+## About this fork
+
+This fork adds autotracking functionality to [Hamsda's EmoTracker pack](https://github.com/Hamsda) for OOT Randomizer, without introducing any other changes. Please refer to the [upstream repository](https://github.com/Hamsda/EmoTrackerPacks) or [pack README](ootrando_overworldmap_hamsda/README.md) if you have any questions regarding the usage or behavior of the standard tracker features.
 
 There is an **[active pull request](https://github.com/Hamsda/EmoTrackerPacks/pull/123)** to officially merge this work into Hamsda's pack. Please show support by giving it a 👍 if you want to see this happen!
+
+This repo accepts pull requests! Fixes and enhancements to the autotracking scripts are welcome here. Any changes that you make *outside* the scope of the autotracker are not likely to be accepted. The goal of this fork is to keep Hamsda's pack intact and generally unchanged.
 
 Huge thanks to [RiptideSage](https://github.com/RiptideSage) for making this project possible.
 
