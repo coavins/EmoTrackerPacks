@@ -20,10 +20,9 @@ Huge thanks to [RiptideSage](https://github.com/RiptideSage) for making this pro
 This pack was tested and known to work with the following software:
 
 - EmoTracker 2.3.8.16
-- The connector.lua included with EmoTracker 2.3.8.16
-- BizHawk 2.3.0 (x64) commit af9d1db
-- Archipelago 0.1.9
-- Archipelago Z5Client 0.12.0
+- BizHawk 2.7.0 (x64) commit dbaf25956
+- BizHawk Connector: https://github.com/coavins/bizhawk-connector
+- Archipelago Ocarina of Time Client 0.3.1
 
 ## Contact
 
