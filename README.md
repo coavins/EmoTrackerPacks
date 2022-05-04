@@ -22,7 +22,7 @@ This pack was tested and known to work with the following software:
 - EmoTracker 2.3.8.16
 - BizHawk 2.7.0 (x64) commit dbaf25956
 - BizHawk Connector: https://github.com/coavins/bizhawk-connector
-- Archipelago Ocarina of Time Client 0.3.1
+- Compatible with Archipelago (Ocarina of Time Client 0.3.1)
 
 ## Contact
 
@@ -52,7 +52,7 @@ When starting a new game, you should make sure that your tracker settings are co
 - Captures for spawn and entrance randomizer
 - At which song location each song was received
 
-## Manual install
+# Install pack
 
 To manually install or update this pack, simply copy [the zip file](https://github.com/coavins/EmoTrackerPacks/releases) into your EmoTracker packs directory. For me, this was in my Users folder:
 
@@ -60,13 +60,23 @@ To manually install or update this pack, simply copy [the zip file](https://gith
 
 You don't have to extract the zip. When EmoTracker is reloaded, it should appear under "Installed Packages" alongside Hamsda's pack, with (Autotracker) in the name.
 
-## Connect to Bizhawk
+# Connect to Bizhawk
 
-To activate the autotracker, right-click the robot icon in the lower right corner and choose "SNES", then "Lua". When the robot turns red or yellow, it is ready and waiting for you to start the connector.lua script in Bizhawk. For me, this was under Program files:
+* Note: You should make sure that your tracker settings are configured correctly _before_ you connect to the emulator.
+
+## Activate autotracker in EmoTracker
+
+To activate the autotracker, right-click the robot icon in the lower right corner of EmoTracker and choose "SNES", then "Lua". When the robot turns red or yellow, it is ready.
+
+## Load connector script in BizHawk
+
+Download the [bizhawk-connector](https://github.com/coavins/bizhawk-connector/releases) script and extract it anywhere. In BizHawk, after your ROM is loaded, go to `Tools > Lua Console`. In the new window, go to `Script > Open Script` and navigate to the `connector.lua` file where you downloaded it.
+
+EmoTracker also includes an older copy of this file under the following path:
 
 `C:\Program Files (x86)\EmoTracker\Connectors\bizhawk\connector.lua`
 
-When the connector.lua script is started, the connection should be established and you should see the robot icon in EmoTracker turn green. After a short delay, autotracking will begin. Items and checks will be marked off as soon as you receive them in-game.
+When the connector.lua script is started, the connection should be established and you should see the robot icon in EmoTracker turn green. After a short delay, autotracking will begin. Items and checks will be marked as soon as you receive them in-game.
 
 ## Racing
 
