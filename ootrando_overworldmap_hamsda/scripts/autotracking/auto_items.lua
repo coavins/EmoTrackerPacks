@@ -599,6 +599,37 @@ function updateItems2FromMemorySegment(segment)
   updateToggleItemFromByteAndFlag(segment, "mirrorshield", 0x8011A66D, 0x40)
 end
 
+function updateMedalList(segment)
+  if has('setting_racemode_on') or not AUTOTRACKER_ENABLE_ITEM_TRACKING then
+    return true
+  end
+
+  if not isInGame() then
+    return false
+  end
+
+  autotracker_debug("read medallion data", DBG_DETAIL)
+  
+  local sum = 0
+
+  for k,_ in pairs(CFG_DUNGEON_REWARDS) do
+    local value = ReadU8(segment, 0x80400CEC + (k - 1))
+    if (k < 9) then
+      sum = sum + value
+    end
+    CFG_DUNGEON_REWARDS[k] = value
+  end
+
+  local reward = 36 - sum
+
+  local item = Tracker:FindObjectForCode("free")
+  local medallion = item.ItemState
+  if medallion then
+    local stage = getMedallionStageForDungeonReward(reward)
+    medallion:setProperty("stage", stage)
+  end
+end
+
 function updateQuestFromMemorySegment(segment)
   if has('setting_racemode_on') or not AUTOTRACKER_ENABLE_ITEM_TRACKING then
     return true
@@ -621,28 +652,22 @@ function updateQuestFromMemorySegment(segment)
   updateProgressiveBombs(segment)     -- 0x8011A673
   updateProgressiveBow(segment)       -- 0x8011A673
 
-  updateSongFromByteAndFlag(segment      , "time"      , 0x8011A675, 0x01)
-  updateSongFromByteAndFlag(segment      , "storm"     , 0x8011A675, 0x02)
-  updateToggleItemFromByteAndFlag(segment, "agony"     , 0x8011A675, 0x20)
-  updateToggleItemFromByteAndFlag(segment, "gerudocard", 0x8011A675, 0x40)
+  updateSongFromByteAndFlag(segment        , "time"      , 0x8011A675, 0x01)
+  updateSongFromByteAndFlag(segment        , "storm"     , 0x8011A675, 0x02)
+  updateToggleItemFromByteAndFlag(segment  , "agony"     , 0x8011A675, 0x20)
+  updateToggleItemFromByteAndFlag(segment  , "gerudocard", 0x8011A675, 0x40)
+  
+  updateSongFromByteAndFlag(segment        , "serenade"  , 0x8011A676, 0x01)
+  updateSongFromByteAndFlag(segment        , "requiem"   , 0x8011A676, 0x02)
+  updateSongFromByteAndFlag(segment        , "nocturne"  , 0x8011A676, 0x04)
+  updateSongFromByteAndFlag(segment        , "prelude"   , 0x8011A676, 0x08)
+  updateSongFromByteAndFlag(segment        , "lullaby"   , 0x8011A676, 0x10)
+  updateSongFromByteAndFlag(segment        , "epona"     , 0x8011A676, 0x20)
+  updateSongFromByteAndFlag(segment        , "saria"     , 0x8011A676, 0x40)
+  updateSongFromByteAndFlag(segment        , "sun"       , 0x8011A676, 0x80)
 
-  updateSongFromByteAndFlag(segment      , "serenade"  , 0x8011A676, 0x01)
-  updateSongFromByteAndFlag(segment      , "requiem"   , 0x8011A676, 0x02)
-  updateSongFromByteAndFlag(segment      , "nocturne"  , 0x8011A676, 0x04)
-  updateSongFromByteAndFlag(segment      , "prelude"   , 0x8011A676, 0x08)
-  updateSongFromByteAndFlag(segment      , "lullaby"   , 0x8011A676, 0x10)
-  updateSongFromByteAndFlag(segment      , "epona"     , 0x8011A676, 0x20)
-  updateSongFromByteAndFlag(segment      , "saria"     , 0x8011A676, 0x40)
-  updateSongFromByteAndFlag(segment      , "sun"       , 0x8011A676, 0x80)
-
-  --updateToggleItemFromByteAndFlag(segment, "forestmed" , 0x8011A677, 0x01)
-  --updateToggleItemFromByteAndFlag(segment, "firemed"   , 0x8011A677, 0x02)
-  --updateToggleItemFromByteAndFlag(segment, "watermed"  , 0x8011A677, 0x04)
-  --updateToggleItemFromByteAndFlag(segment, "spiritmed" , 0x8011A677, 0x08)
-  --updateToggleItemFromByteAndFlag(segment, "shadowmed" , 0x8011A677, 0x10)
-  --updateToggleItemFromByteAndFlag(segment, "lightmed"  , 0x8011A677, 0x20)
-  updateSongFromByteAndFlag(segment, "minuet"    , 0x8011A677, 0x40)
-  updateSongFromByteAndFlag(segment, "bolero"    , 0x8011A677, 0x80)
+  updateSongFromByteAndFlag(segment        , "minuet"    , 0x8011A677, 0x40)
+  updateSongFromByteAndFlag(segment        , "bolero"    , 0x8011A677, 0x80)
 
   -- only for keysanity variant
   if HAS_KEYS then

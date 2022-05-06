@@ -99,6 +99,42 @@ function isInGame()
   end
 end
 
+function getMedallionStageForDungeonReward(value)
+  local stage = 1
+  if (value < 3) then
+    stage = 2
+  elseif (value == 3) then
+    stage = 3
+  elseif (value == 4 or value == 5) then
+    stage = 4
+  elseif (value == 6 or value == 7) then
+    stage = 5
+  elseif (value == 8) then
+    stage = 6
+  end
+  return stage
+end
+
+function getIntForDungeonRewardCode(code)
+  local currentStage = 1
+  if     code == "deku"     then currentStage = 1 
+  elseif code == "dodongo"  then currentStage = 2
+  elseif code == "jabu"     then currentStage = 3
+  elseif code == "forest"   then currentStage = 4
+  elseif code == "fire"     then currentStage = 5
+  elseif code == "water"    then currentStage = 6
+  elseif code == "shadow"   then currentStage = 8
+  elseif code == "spirit"   then currentStage = 7
+  elseif code == "botw"     then currentStage = 9
+  elseif code == "ice"      then currentStage = 10
+  elseif code == "free"     then currentStage = 11
+  elseif code == "hideout"  then currentStage = 12
+  elseif code == "gtg"      then currentStage = 13
+  elseif code == "ganon"    then currentStage = 14
+  end
+  return currentStage
+end
+
 function resetGlobalVariables()
   DBG_ERROR  = 0
   DBG_NORMAL = 1
@@ -161,6 +197,24 @@ function resetGlobalVariables()
 
   -- array of beans that were planted, used to ensure accurate bean count in inventory
   BEANS_USED = {}
+
+  CFG_DUNGEON_REWARDS= {
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  }
+
 end
 
 resetGlobalVariables()

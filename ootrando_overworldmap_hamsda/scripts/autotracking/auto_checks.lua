@@ -69,7 +69,8 @@ end
 
 local function updateDungeonPrizeFromDataAndFlags(data, code, flags)
   local item = Tracker:FindObjectForCode(code)
-  if item then
+  local medallion = item.ItemState
+  if medallion then
     local won = true
 
     for i = 1, #flags do
@@ -80,14 +81,17 @@ local function updateDungeonPrizeFromDataAndFlags(data, code, flags)
       end
     end
 
-    local isActive = item:Get("active")
-
-    if isActive ~= won then
-      if won then autotracker_debug(string.format('Y %s', item.Name))
-      else        autotracker_debug(string.format('N %s', item.Name))
+    if medallion:getProperty("active") ~= won then
+      if won then
+        autotracker_debug(string.format('Y %s', item.Name))
+        local value = CFG_DUNGEON_REWARDS[getIntForDungeonRewardCode(code)]
+        local stage = getMedallionStageForDungeonReward(value)
+        medallion:setProperty("stage", stage)
+      else
+        autotracker_debug(string.format('N %s', item.Name))
       end
 
-      item:Set("active", won)
+      medallion:setProperty("active", won)
     end
   else
     autotracker_debug(string.format('Unable to find item by code: %s', code), DBG_ERROR)
