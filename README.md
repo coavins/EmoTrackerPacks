@@ -20,7 +20,7 @@ Huge thanks to [RiptideSage](https://github.com/RiptideSage) for making this pro
 This pack was tested and known to work with the following software:
 
 - EmoTracker 2.3.8.16
-- BizHawk 2.7.0 (x64) commit dbaf25956
+- BizHawk 2.3 through 2.8
 - BizHawk Connector: https://github.com/coavins/bizhawk-connector
 - Compatible with Archipelago (Ocarina of Time Client 0.3.1)
 
