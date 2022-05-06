@@ -96,26 +96,28 @@ local function updateHideoutCardCheck(segment, code)
 end
 
 local function updateDungeonPrizeFromEventData(segment, code, major_offset, flag)
-  local item = Tracker:FindObjectForCode(code) 
-  local medallion = item.ItemState
-  if medallion then
-    local event_address = ADDR_EVENT_CONTEXT + 0x2 * major_offset;
-    local data = ReadU16(segment, event_address)
-    local bitmask = 0x1 << flag
+  local item = Tracker:FindObjectForCode(code)
+  if item then
+    local medallion = item.ItemState
+    if medallion then
+      local event_address = ADDR_EVENT_CONTEXT + 0x2 * major_offset;
+      local data = ReadU16(segment, event_address)
+      local bitmask = 0x1 << flag
 
-    local won = (data & bitmask ~= 0)
+      local won = (data & bitmask ~= 0)
 
-    if medallion:getProperty("active") ~= won then
-      if won then
-        autotracker_debug(string.format('Y %s', item.Name))
-        local value = CFG_DUNGEON_REWARDS[getIntForDungeonRewardCode(code)]
-        local stage = getMedallionStageForDungeonReward(value)
-        medallion:setProperty("stage", stage)
-      else
-        autotracker_debug(string.format('N %s', item.Name))
+      if medallion:getProperty("active") ~= won then
+        if won then
+          autotracker_debug(string.format('Y %s', item.Name))
+          local value = CFG_DUNGEON_REWARDS[getIntForDungeonRewardCode(code)]
+          local stage = getMedallionStageForDungeonReward(value)
+          medallion:setProperty("stage", stage)
+        else
+          autotracker_debug(string.format('N %s', item.Name))
+        end
+
+        medallion:setProperty("active", won)
       end
-
-      medallion:setProperty("active", won)
     end
   else
     autotracker_debug(string.format('Unable to find item by code: %s', code), DBG_ERROR)
