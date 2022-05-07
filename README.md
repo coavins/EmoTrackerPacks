@@ -2,16 +2,17 @@
 
 ### [Download latest version](https://github.com/coavins/EmoTrackerPacks/releases)
 
-[![Current version](https://img.shields.io/badge/version-3.7.2.0-blue)](https://github.com/coavins/EmoTrackerPacks/releases)
-[![Test Status](https://github.com/coavins/EmoTrackerPacks/workflows/tests/badge.svg)](https://github.com/coavins/EmoTrackerPacks/actions)
+![Base version](https://img.shields.io/badge/base-v3.7.2.0-blue)
+![Autotracker version](https://img.shields.io/badge/auto-v2-red)
+![Test Status](https://github.com/coavins/EmoTrackerPacks/workflows/tests/badge.svg)
 
 ## About this fork
 
-This fork adds autotracking functionality to [Hamsda's EmoTracker pack](https://github.com/Hamsda) for OOT Randomizer, without introducing any other changes. Please refer to the [upstream repository](https://github.com/Hamsda/EmoTrackerPacks) or [pack README](ootrando_overworldmap_hamsda/README.md) if you have any questions regarding the usage or behavior of the standard tracker features.
+This fork adds autotracking functionality to [Hamsda's EmoTracker pack](https://github.com/Hamsda/EmoTrackerPacks) for OOT Randomizer. Please refer to the [upstream repository](https://github.com/Hamsda/EmoTrackerPacks) or [pack README](ootrando_overworldmap_hamsda/README.md) if you have any questions regarding the usage or behavior of the standard tracker features.
 
 There is an **[active pull request](https://github.com/Hamsda/EmoTrackerPacks/pull/123)** to officially merge this work into Hamsda's pack. Please show support by giving it a 👍 if you want to see this happen!
 
-This repo accepts pull requests! Fixes and enhancements to the autotracking scripts are welcome here. Any changes that you make *outside* the scope of the autotracker are not likely to be accepted. The goal of this fork is to keep Hamsda's pack intact and generally unchanged.
+This repo accepts pull requests! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for more information.
 
 Huge thanks to [RiptideSage](https://github.com/RiptideSage) for making this project possible.
 
@@ -28,23 +29,29 @@ This pack was tested and known to work with the following software:
 
 If you encounter a problem with the autotracker, please create an issue in this repository or reach out to me via email or Matrix chat with the addresses on my profile.
 
-If you are having trouble with basic use of the tracker in general, you might want to check out the [upstream repository](https://github.com/Hamsda/EmoTrackerPacks).
+If you're having trouble with basic use of the tracker in general, you might want to check out the [upstream repository](https://github.com/Hamsda/EmoTrackerPacks).
 
 # Usage
 
 When starting a new game, you should make sure that your tracker settings are configured correctly _before_ you connect to the emulator, as the autotracker will immediately start making changes based on your active settings. The autotracker can also be used with a file you already started playing; it will catch up and mark off all items and cleared checks.
 
-### Things that are currently autotracked:
+## Things that are autotracked:
+
+### Checks
 
 - Inventory items
 - Quest items
 - Locations checked
 - Dungeon bosses defeated
 - Trade sequence progress
-- Keys received (for keysanity variants)
+- Keys found (for keysanity variants)
 - Beans planted
 
-### Things that are NOT autotracked:
+### Settings
+
+- Free scarecrow's song
+
+## Things that are NOT yet tracked:
 
 - Master Quest dungeon checks
 - Which prize is awarded by each dungeon
@@ -52,21 +59,21 @@ When starting a new game, you should make sure that your tracker settings are co
 - Captures for spawn and entrance randomizer
 - At which song location each song was received
 
-# Install pack
+# Install
 
-To manually install or update this pack, simply copy [the zip file](https://github.com/coavins/EmoTrackerPacks/releases) into your EmoTracker packs directory. For me, this was in my Users folder:
+To manually install or update this pack, download [the latest release](https://github.com/coavins/EmoTrackerPacks/releases) and put the zip file into your EmoTracker packs directory:
 
 `C:\Users\coavins\Documents\EmoTracker\packs`
 
-You don't have to extract the zip. When EmoTracker is reloaded, it should appear under "Installed Packages" alongside Hamsda's pack, with (Autotracker) in the name.
+You don't have to extract the zip. When EmoTracker is reloaded, this pack should appear under "Installed Packages" with (Autotracker) in the name.
 
 # Connect to Bizhawk
-
-* Note: You should make sure that your tracker settings are configured correctly _before_ you connect to the emulator.
 
 ## Activate autotracker in EmoTracker
 
 To activate the autotracker, right-click the robot icon in the lower right corner of EmoTracker and choose "SNES", then "Lua". When the robot turns red or yellow, it is ready.
+
+* Note: You should make sure that your tracker settings are configured correctly before you connect to the emulator.
 
 ## Load connector script in BizHawk
 
@@ -80,7 +87,7 @@ When the connector.lua script is started, the connection should be established a
 
 ## Racing
 
-The autotracker will only function when casual mode is enabled. This setting can be found in the item grid.
+The autotracker will only function when racing mode is disabled.
 
 ![Casual](ootrando_overworldmap_hamsda/images/setting_racemode_off.png "Casual") When this setting is displayed, the autotracker will operate normally.
 
