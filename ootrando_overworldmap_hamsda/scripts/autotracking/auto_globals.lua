@@ -135,6 +135,26 @@ function getIntForDungeonRewardCode(code)
   return currentStage
 end
 
+function getIntForSceneIndex(scene_index)
+  local currentStage = 1
+  if     scene_index == 0x00  then currentStage = 1 
+  elseif scene_index == 0x01  then currentStage = 2
+  elseif scene_index == 0x02  then currentStage = 3
+  elseif scene_index == 0x03  then currentStage = 4
+  elseif scene_index == 0x04  then currentStage = 5
+  elseif scene_index == 0x05  then currentStage = 6
+  elseif scene_index == 0x06  then currentStage = 7
+  elseif scene_index == 0x07  then currentStage = 8
+  elseif scene_index == 0x08  then currentStage = 9
+  elseif scene_index == 0x09  then currentStage = 10
+  elseif scene_index == 0x0A  then currentStage = 11
+  elseif scene_index == 0x0B  then currentStage = 12
+  elseif scene_index == 0x0C  then currentStage = 13
+  elseif scene_index == 0x0D  then currentStage = 14
+  end
+  return currentStage
+end
+
 function resetGlobalVariables()
   DBG_ERROR  = 0
   DBG_NORMAL = 1
@@ -217,6 +237,23 @@ function resetGlobalVariables()
   12,
   13,
   14,
+  }
+
+  CFG_DUNGEON_IS_MQ= {
+  false,
+  false,
+  false,
+  false,
+  false,
+  false,
+  false,
+  false,
+  false,
+  false,
+  false,
+  false,
+  false,
+  false,
   }
 
 end

@@ -31,6 +31,7 @@ print("")
 -- Memory watches
 ScriptHost:AddMemoryWatch("Rando FREE_SCARECROW_ENABLED"  , 0x80400CBC, 0x01, updateScarecrow)
 ScriptHost:AddMemoryWatch("Find Autotracker Context"      , 0x8040000C, 0x04, findAutotrackerContext)
+ScriptHost:AddMemoryWatch("Rando CFG_DUNGEON_IS_MQ"       , 0x80400CFA, 0x0E, updateDungeonIsMQ)
 ScriptHost:AddMemoryWatch("OOT Magic Meter Data"          , 0x8011A602, 0x01, updateMagicMeterFromMemorySegment)
 ScriptHost:AddMemoryWatch("OOT Biggoron Data"             , 0x8011A60E, 0x01, updateBiggoronFromMemorySegment)
 ScriptHost:AddMemoryWatch("OOT Item Data 1"               , 0x8011A642, 0x1A, updateItems1FromMemorySegment)

@@ -463,3 +463,204 @@ for k in pairs(scenes) do
 end
 
 table.sort(orderedSceneIndices)
+
+
+scenesMQ = {}
+
+scenesMQ[0x00] = {
+  {type = 'chest', code = '@Deku Tree MQ/Compass Chest'             , flags = {0x1}}
+ ,{type = 'chest', code = '@Deku Tree MQ/Map Chest'                 , flags = {0x3}}
+ ,{type = 'chest', code = '@Deku Tree MQ/Slingshot Chest'           , flags = {0x6}}
+ ,{type = 'chest', code = '@Deku Tree MQ/Slingshot Room Back Chest' , flags = {0x2}}
+ ,{type = 'chest', code = '@Deku Tree MQ/Basement Chest'            , flags = {0x5}}
+ ,{type = 'chest', code = '@Deku Tree MQ/After Spinning Log Chest'  , flags = {0x4}}
+ ,{type = 'chest', code = '@Deku Tree MQ/Before Spinning Log Chest' , flags = {0x0}}
+
+ ,{type = 'scrub', code = '@Deku Tree MQ/Deku Scrub'                , flags = {0x5}}
+}
+
+scenesMQ[0x01] = {
+  {type = 'chest', code = '@Dodongos Cavern MQ/Map Chest'                                 , flags = {0x0}}
+ ,{type = 'chest', code = '@Dodongos Cavern MQ/Compass Chest'                             , flags = {0x5}}
+ ,{type = 'chest', code = '@Dodongos Cavern MQ/Torch Puzzle Room Chest'                   , flags = {0x3}}
+ ,{type = 'chest', code = '@Dodongos Cavern MQ/Bomb Bag Chest'                            , flags = {0x4}}
+ ,{type = 'chest', code = '@Dodongos Cavern MQ/Larvae Room Chest'                         , flags = {0x2}}
+ ,{type = 'chest', code = '@Dodongos Cavern MQ/Under Grave Chest'                         , flags = {0x1}}
+
+ ,{type = 'scrub', code = '@Dodongos Cavern MQ/Deku Scrubs Lobby'                         , flags = {0x4, 0x2}}
+ ,{type = 'scrub', code = '@Dodongos Cavern MQ/Deku Scrub Side Room Near Lower Lizalfos'  , flags = {0x8}}
+ ,{type = 'scrub', code = '@Dodongos Cavern MQ/Deku Scrub Staircase'                      , flags = {0x5}}
+}
+
+scenesMQ[0x02] = {
+  {type = 'chest', code = '@Jabu Jabus Belly MQ/Basement Chests'                , flags = {0x04, 0x08}}
+ ,{type = 'chest', code = '@Jabu Jabus Belly MQ/Map Chest'                      , flags = {0x03}}
+ ,{type = 'chest', code = '@Jabu Jabus Belly MQ/Compass Chest'                  , flags = {0x00}}
+ ,{type = 'chest', code = '@Jabu Jabus Belly MQ/First Room Side Chest'          , flags = {0x05}}
+ ,{type = 'chest', code = '@Jabu Jabus Belly MQ/Second Room Lower Chest'        , flags = {0x02}}
+ ,{type = 'chest', code = '@Jabu Jabus Belly MQ/Boomerang Room Chests'          , flags = {0x01, 0x06}}
+ ,{type = 'chest', code = '@Jabu Jabus Belly MQ/Falling Like Like Room Chest'   , flags = {0x09}}
+ ,{type = 'chest', code = '@Jabu Jabus Belly MQ/Second Room Upper Chest'        , flags = {0x07}}
+ ,{type = 'chest', code = '@Jabu Jabus Belly MQ/Near Boss Chest'                , flags = {0x0A}}
+
+ ,{type = 'cow', code = '@Jabu Jabus Belly MQ/Cow'                              , flags = {0x15}}
+}
+
+scenesMQ[0x03] = {
+  {type = 'chest', code = '@Forest Temple MQ/Wolfos Chest'                        , flags = {0x0}}
+ ,{type = 'chest', code = '@Forest Temple MQ/Map Chest'                           , flags = {0xD}}
+ ,{type = 'chest', code = '@Forest Temple MQ/Redead Chest'                        , flags = {0x2}}
+ ,{type = 'chest', code = '@Forest Temple MQ/First Room Chest'                    , flags = {0x3}}
+ ,{type = 'chest', code = '@Forest Temple MQ/Compass Chest'                       , flags = {0xF}}
+ ,{type = 'chest', code = '@Forest Temple MQ/Raised Island Courtyard Upper Chest' , flags = {0x5}}
+ ,{type = 'chest', code = '@Forest Temple MQ/Falling Ceiling Room Chest'          , flags = {0x6}}
+ ,{type = 'chest', code = '@Forest Temple MQ/Well Chest'                          , flags = {0x9}}
+ ,{type = 'chest', code = '@Forest Temple MQ/Basement Chest'                      , flags = {0xB}}
+ ,{type = 'chest', code = '@Forest Temple MQ/Bow Chest'                           , flags = {0xC}}
+ ,{type = 'chest', code = '@Forest Temple MQ/Raised Island Courtyard Lower Chest' , flags = {0x1}}
+ ,{type = 'chest', code = '@Forest Temple MQ/Boss Key Chest'                      , flags = {0xE}}
+
+ ,{type = 'keys', code = 'forestsmall', flags = {0x0, 0x1, 0x2, 0x3, 0x4}}
+}
+
+scenesMQ[0x04] = {
+  {type = 'chest', code = '@Fire Temple MQ/Map Room Side Chest'               , flags = {0x02}}
+ ,{type = 'chest', code = '@Fire Temple MQ/Megaton Hammer Chest'              , flags = {0x00}}
+ ,{type = 'chest', code = '@Fire Temple MQ/Near Boss Chest'                   , flags = {0x07}}
+ ,{type = 'chest', code = '@Fire Temple MQ/Big Lava Room Blocked Door Chest'  , flags = {0x01}}
+ ,{type = 'chest', code = '@Fire Temple MQ/Lizalfos Maze Side Room Chest'     , flags = {0x08}}
+ ,{type = 'chest', code = '@Fire Temple MQ/Compass Chest'                     , flags = {0x0B}}
+ ,{type = 'chest', code = '@Fire Temple MQ/Lizalfos Maze Upper Chest'         , flags = {0x06}}
+ ,{type = 'chest', code = '@Fire Temple MQ/Map Chest'                         , flags = {0x0C}}
+ ,{type = 'chest', code = '@Fire Temple MQ/Lizalfos Maze Lower Chest'         , flags = {0x03}}
+ ,{type = 'chest', code = '@Fire Temple MQ/Boss Key Chest'                    , flags = {0x04}}
+ ,{type = 'chest', code = '@Fire Temple MQ/Chest On Fire'                     , flags = {0x05}}
+
+ ,{type = 'ground', code = '@Fire Temple MQ/Freestanding Key'                 , flags = {0x1C}}
+
+ ,{type = 'keys', code = 'firesmall', flags = {0x17, 0x18, 0x19, 0x1A, 0x1B, 0x1D, 0x1E, 0x1F}}
+}
+
+scenesMQ[0x05] = {
+  {type = 'chest', code = '@Water Temple MQ/Longshot Chest'       , flags = {0x00}}
+ ,{type = 'chest', code = '@Water Temple MQ/Compass Chest'        , flags = {0x01}}
+ ,{type = 'chest', code = '@Water Temple MQ/Map Chest'            , flags = {0x02}}
+ ,{type = 'chest', code = '@Water Temple MQ/Boss Key Chest'       , flags = {0x05}}
+ ,{type = 'chest', code = '@Water Temple MQ/Central Pillar Chest' , flags = {0x06}}
+
+ ,{type = 'ground', code = '@Water Temple MQ/Freestanding Key'    , flags = {0x01}}
+
+   -- 6 keys, but only 5 locked doors in rando
+ ,{type = 'keys', code = 'watersmall', flags = {0x01, 0x02, 0x05, 0x06, 0x09}}
+}
+
+scenesMQ[0x06] = {
+  {type = 'chest', code = '@Spirit Temple MQ/Entrance Front Left Chest'     , flags = {0x1A}}
+ ,{type = 'chest', code = '@Spirit Temple MQ/Entrance Back Right Chest'     , flags = {0x1F}}
+ ,{type = 'chest', code = '@Spirit Temple MQ/Entrance Back Left Chest'      , flags = {0x1E}}
+ ,{type = 'chest', code = '@Spirit Temple MQ/Entrance Front Right Chest'    , flags = {0x1B}}
+ ,{type = 'chest', code = '@Spirit Temple MQ/Map Chest'                     , flags = {0x00}}
+ ,{type = 'chest', code = '@Spirit Temple MQ/Map Room Enemy Chest'          , flags = {0x08}}
+ ,{type = 'chest', code = '@Spirit Temple MQ/Child Climb North Chest'       , flags = {0x06}}
+ ,{type = 'chest', code = '@Spirit Temple MQ/Child Climb South Chest'       , flags = {0x0C}}
+ ,{type = 'chest', code = '@Spirit Temple MQ/Child Hammer Switch Chest'     , flags = {0x1D}}
+ ,{type = 'chest', code = '@Spirit Temple MQ/Silver Block Hallway Chest'    , flags = {0x1C}}
+ ,{type = 'chest', code = '@Spirit Temple MQ/Compass Chest'                 , flags = {0x03}}
+ ,{type = 'chest', code = '@Spirit Temple MQ/Sun Block Room Chest'          , flags = {0x01}}
+ ,{type = 'chest', code = '@Spirit Temple MQ/Statue Room Lullaby Chest'     , flags = {0x0F}}
+ ,{type = 'chest', code = '@Spirit Temple MQ/Statue Room Invisible Chest'   , flags = {0x02}}
+ ,{type = 'chest', code = '@Spirit Temple MQ/Leever Room Chest'             , flags = {0x04}}
+ ,{type = 'chest', code = '@Spirit Temple MQ/Symphony Room Chest'           , flags = {0x07}}
+ ,{type = 'chest', code = '@Spirit Temple MQ/Beamos Room Chest'             , flags = {0x19}}
+ ,{type = 'chest', code = '@Spirit Temple MQ/Chest Switch Chest'            , flags = {0x18}}
+ ,{type = 'chest', code = '@Spirit Temple MQ/Boss Key Chest'                , flags = {0x05}}
+ ,{type = 'chest', code = '@Spirit Temple MQ/Mirror Puzzle Invisible Chest' , flags = {0x12}}
+
+ ,{type = 'keys', code = 'spiritsmall', flags = {0x0D, 0x15, 0x1B, 0x1C, 0x1E}}
+}
+
+scenesMQ[0x07] = {
+  {type = 'chest', code = '@Shadow Temple MQ/Early Gibdos Chest'          , flags = {0x03}}
+ ,{type = 'chest', code = '@Shadow Temple MQ/Map Chest'                   , flags = {0x02}}
+ ,{type = 'chest', code = '@Shadow Temple MQ/Near Ship Invisible Chest'   , flags = {0x0E}}
+ ,{type = 'chest', code = '@Shadow Temple MQ/Compass Chest'               , flags = {0x01}}
+ ,{type = 'chest', code = '@Shadow Temple MQ/Hover Boots Chest'           , flags = {0x07}}
+ ,{type = 'chest', code = '@Shadow Temple MQ/Invisible Blades Chests'     , flags = {0x16, 0x0C}}
+ ,{type = 'chest', code = '@Shadow Temple MQ/Beamos Silver Rupees Chest'  , flags = {0x0F}}
+ ,{type = 'chest', code = '@Shadow Temple MQ/Falling Spikes Lower Chest'  , flags = {0x05}}
+ ,{type = 'chest', code = '@Shadow Temple MQ/Falling Spikes Upper Chests' , flags = {0x06, 0x04}}
+ ,{type = 'chest', code = '@Shadow Temple MQ/Invisible Spikes Chest'      , flags = {0x09}}
+ ,{type = 'chest', code = '@Shadow Temple MQ/Stalfos Room Chest'          , flags = {0x10}}
+ ,{type = 'chest', code = '@Shadow Temple MQ/Wind Hint Chest'             , flags = {0x15}}
+ ,{type = 'chest', code = '@Shadow Temple MQ/After Wind Chests'           , flags = {0x14, 0x08}}
+ ,{type = 'chest', code = '@Shadow Temple MQ/Boss Key Chest'              , flags = {0x0B}}
+ ,{type = 'chest', code = '@Shadow Temple MQ/Spike Walls Left Chest'      , flags = {0x0A}}
+ ,{type = 'chest', code = '@Shadow Temple MQ/Bomb Flower Chest'           , flags = {0x0D}}
+
+ ,{type = 'ground', code = '@Shadow Temple MQ/Freestanding Key'           , flags = {0x06}}
+
+ ,{type = 'keys', code = 'shadowsmall', flags = {0x15, 0x16, 0x17, 0x18, 0x19}}
+}
+
+scenesMQ[0x08] = {
+  {type = 'chest' , code = '@Bottom of the Well MQ/Compass Chest'                     , flags = {0x02}}
+ ,{type = 'chest' , code = '@Bottom of the Well MQ/Lens of Truth Chest'               , flags = {0x01}}
+ ,{type = 'chest' , code = '@Bottom of the Well MQ/Map Chest'                         , flags = {0x03}}
+
+ ,{type = 'ground', code = '@Bottom of the Well MQ/East Inner Room Freestanding Key'  , flags = {0x01}}
+ ,{type = 'ground', code = '@Bottom of the Well MQ/Dead Hand Freestanding Key'        , flags = {0x02}}
+
+ ,{type = 'keys', code = 'botwsmall', flags = {0x1B, 0x1C, 0x1D}}
+}
+
+scenesMQ[0x09] = {
+  {type = 'chest', code = '@Ice Cavern MQ/Map Chest'       , flags = {0x01}}
+ ,{type = 'chest', code = '@Ice Cavern MQ/Compass Chest'   , flags = {0x00}}
+ ,{type = 'chest', code = '@Ice Cavern MQ/Iron Boots Chest', flags = {0x02}}
+
+ ,{type = 'ground', code = '@Ice Cavern MQ/Freestanding PoH', flags = {0x01}}
+}
+
+scenesMQ[0x0A] = {
+}
+
+scenesMQ[0x0B] = {
+  {type = 'chest', code = '@Gerudo Training Ground MQ/First Iron Knuckle Chest'                 , flags = {0x00}}
+ ,{type = 'chest', code = '@Gerudo Training Ground MQ/Heavy Block Chest'           , flags = {0x02}}
+ ,{type = 'chest', code = '@Gerudo Training Ground MQ/Eye Statue Chest'             , flags = {0x03}}
+ ,{type = 'chest', code = '@Gerudo Training Ground MQ/Second Iron Knuckle Chest'         , flags = {0x12}}
+ ,{type = 'chest', code = '@Gerudo Training Ground MQ/Maze Right Chests'            , flags = {0x05, 0x08}}
+ ,{type = 'chest', code = '@Gerudo Training Ground MQ/Maze Path First Chest'        , flags = {0x06}}
+ ,{type = 'chest', code = '@Gerudo Training Ground MQ/Lobby Chests'                 , flags = {0x07, 0x13}}
+ ,{type = 'chest', code = '@Gerudo Training Ground MQ/Maze Path Third Chest'        , flags = {0x09}}
+ ,{type = 'chest', code = '@Gerudo Training Ground MQ/Flame Circle Chest'     , flags = {0x0E}}
+ ,{type = 'chest', code = '@Gerudo Training Ground MQ/Before Heavy Block Chest'     , flags = {0x11}}
+ ,{type = 'chest', code = '@Gerudo Training Ground MQ/Maze Path Second Chest'       , flags = {0x0A}}
+ ,{type = 'chest', code = '@Gerudo Training Ground MQ/Hidden Ceiling Chest'         , flags = {0x0B}}
+ ,{type = 'chest', code = '@Gerudo Training Ground MQ/Dinolfos Chest'         , flags = {0x01}}
+ ,{type = 'chest', code = '@Gerudo Training Ground MQ/Ice Arrows Chest'        , flags = {0x04}}
+ ,{type = 'chest', code = '@Gerudo Training Ground MQ/Underwater Silver Rupee Chest', flags = {0x0D}}
+
+ ,{type = 'keys', code = 'gtgsmall', flags = {0x01, 0x03, 0x04, 0x05, 0x06, 0x07, 0x09, 0x0A, 0x17}}
+}
+
+scenesMQ[0x0C] = {
+}
+
+scenesMQ[0x0D] = {
+  {type = 'chest', code = '@Ganons Castle MQ/Shadow Trial Bomb Flower Chest'        , flags = {0x00}}
+ ,{type = 'chest', code = '@Ganons Castle MQ/Water Trial Chest'                     , flags = {0x01}}
+ ,{type = 'chest', code = '@Ganons Castle MQ/Shadow Trial Eye Switch Chest'         , flags = {0x05}}
+ ,{type = 'chest', code = '@Ganons Castle MQ/Forest Trial Eye Switch Chest'         , flags = {0x02}}
+ ,{type = 'chest', code = '@Ganons Castle MQ/Forest Trial Frozen Eye Switch Chest'  , flags = {0x03}}
+ ,{type = 'chest', code = '@Ganons Castle MQ/Light Trial Lullaby Chest'             , flags = {0x04}}
+ ,{type = 'chest', code = '@Ganons Castle MQ/Spirit Trial First Chest'              , flags = {0x0A}}
+ ,{type = 'chest', code = '@Ganons Castle MQ/Spirit Trial Invisible Chest'          , flags = {0x14}}
+ ,{type = 'chest', code = '@Ganons Castle MQ/Spirit Trial Sun Chests'               , flags = {0x09, 0x08, 0x07, 0x06}}
+
+ ,{type = 'ground', code = '@Ganons Castle MQ/Forest Trial Freestanding Key'        , flags = {0x1}}
+
+ ,{type = 'scrub', code = '@Ganons Castle MQ/Deku Scrubs'                           , flags = {0x01, 0x04, 0x06, 0x08, 0x09}}
+
+ ,{type = 'keys', code = 'gcsmall', flags = {0x1E, 0x1D}}
+}

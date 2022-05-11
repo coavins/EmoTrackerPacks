@@ -180,6 +180,24 @@ end
 -- == MEMORY WATCH ==
 -- ==================
 
+function updateDungeonIsMQ(segment)
+  if has('setting_racemode_on') or not AUTOTRACKER_ENABLE_ITEM_TRACKING then
+    return true
+  end
+
+  if not isInGame() then
+    return false
+  end
+
+  autotracker_debug("read CFG_DUNGEON_IS_MQ data", DBG_DETAIL)
+  
+  for k,_ in pairs(CFG_DUNGEON_IS_MQ) do
+    local value = ReadU8(segment, 0x80400CFA  + (k - 1))
+    local newSetting = (value ~= 0)
+    CFG_DUNGEON_IS_MQ[k] = newSetting
+  end
+end
+
 function updateEventsFromMemorySegment(segment)
   if has('setting_racemode_on') or not AUTOTRACKER_ENABLE_LOCATION_TRACKING or not isInGame() then
     return true
