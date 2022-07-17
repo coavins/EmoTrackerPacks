@@ -30,6 +30,12 @@ If you're having trouble with basic use of the tracker in general, you might wan
 - BizHawk (tested with 2.3 through 2.8)
 - [bizhawk-connector](https://github.com/coavins/bizhawk-connector)
 
+## Install bizhawk-connector
+
+https://github.com/coavins/bizhawk-connector
+
+Install this script into the Lua folder for Bizhawk.
+
 ## Install the pack
 
 To manually install or update this pack, download [the latest release](https://github.com/coavins/EmoTrackerPacks/releases) and put the zip file into your EmoTracker packs directory:
