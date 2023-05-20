@@ -171,6 +171,10 @@ function resetGlobalVariables()
   ADDR_ITEM_GET_INF    = ADDR_SAVE_CONTEXT + 0xEF0 --0x11B4C0
   ADDR_INF_TABLE       = ADDR_SAVE_CONTEXT + 0xEF8 --0x11B4C8
 
+  -- Autotracker context address
+  -- This address is discovered during runtime at address 0x8040000C
+  ADDR_AUTOTRACKER_CONTEXT = 0x0
+
   -- State variables to help keep track of some things
   KING_ZORA_MOVED = false
   HAS_RUTO_BOTTLE = false

@@ -609,11 +609,14 @@ function updateMedalList(segment)
   end
 
   autotracker_debug("read medallion data", DBG_DETAIL)
+
+  local rewards_offset_v4 = 0x20
+  local rewards_address = ADDR_AUTOTRACKER_CONTEXT + rewards_offset_v4
   
   local sum = 0
 
   for k,_ in pairs(CFG_DUNGEON_REWARDS) do
-    local value = ReadU8(segment, 0x80400CEC + (k - 1))
+    local value = ReadU8(segment, rewards_address + (k - 1))
     if (k < 9) then
       sum = sum + value
     end
