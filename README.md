@@ -77,6 +77,7 @@ When starting a new game, you should make sure that your tracker settings are co
 - Trade sequence progress
 - Keys found (for keysanity variants)
 - Beans planted
+- Which prize is awarded by each dungeon
 
 ### Settings
 
@@ -85,7 +86,6 @@ When starting a new game, you should make sure that your tracker settings are co
 ## Things that are NOT yet tracked:
 
 - Master Quest dungeon checks
-- Which prize is awarded by each dungeon
 - Whether the scarecrow's song is available
 - Captures for spawn and entrance randomizer
 - At which song location each song was received
