@@ -13,12 +13,12 @@
       {
         "img": "images/setting_forest_deku.png",
         "codes": "setting_forest,setting_forest_deku",
-        "inherits_codes": false
+        "inherit_codes": false
       },
       {
         "img": "images/setting_forest_open.png",
         "codes": "setting_forest,setting_forest_open",
-        "inherits_codes": false
+        "inherit_codes": false
       }
     ]
   },
@@ -206,7 +206,7 @@
       {
         "img": "images/setting_entrance_interiors_simple.png",
         "codes": "setting_entrance_interiors,setting_entrance_interiors_simple",
-        "inherits_codes": false
+        "inherit_codes": false
       },
       {
         "img": "images/setting_entrance_interiors_all.png",
@@ -229,7 +229,7 @@
       {
         "img": "images/setting_entrance_grottos_shuffle.png",
         "codes": "setting_entrance_grottos,setting_entrance_grottos_shuffle",
-        "inherits_codes": false
+        "inherit_codes": false
       }
     ]
   },
@@ -248,7 +248,7 @@
       {
         "img": "images/setting_entrance_dungeons_shuffle.png",
         "codes": "setting_entrance_dungeons,setting_entrance_dungeons_shuffle",
-        "inherits_codes": false
+        "inherit_codes": false
       }
     ]
   },
@@ -267,7 +267,26 @@
       {
         "img": "images/setting_entrance_overworld_shuffle.png",
         "codes": "setting_entrance_overworld,setting_entrance_overworld_shuffle",
-        "inherits_codes": false
+        "inherit_codes": false
+      }
+    ]
+  },
+  {
+    "name": "Shuffle Gerudo Valley River Exit",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "initial_stage_idx": 1,
+    "stages": [
+      {
+        "img": "images/setting_entrance_gv_river.png",
+        "img_mods": "@disabled",
+        "codes": "setting_entrance_gv_river,setting_entrance_gv_river_off"
+      },
+      {
+        "img": "images/setting_entrance_gv_river.png",
+        "codes": "setting_entrance_gv_river,setting_entrance_gv_river_on",
+        "inherit_codes": false
       }
     ]
   },
@@ -286,7 +305,7 @@
       {
         "img": "images/setting_entrance_mixed_indoor.png",
         "codes": "setting_entrance_mixed,setting_entrance_mixed_indoor",
-        "inherits_codes": false
+        "inherit_codes": false
       },
       {
         "img": "images/setting_entrance_mixed_all.png",
@@ -309,7 +328,7 @@
       {
         "img": "images/setting_entrance_owl_shuffle.png",
         "codes": "setting_entrance_owl,setting_entrance_owl_shuffle",
-        "inherits_codes": false
+        "inherit_codes": false
       }
     ]
   },
@@ -328,7 +347,7 @@
       {
         "img": "images/setting_entrance_warpsong_shuffle.png",
         "codes": "setting_entrance_warpsong,setting_entrance_warpsong_shuffle",
-        "inherits_codes": false
+        "inherit_codes": false
       }
     ]
   },
@@ -337,17 +356,26 @@
     "type": "progressive",
     "allow_disabled": false,
     "loop": true,
-    "initial_stage_idx": 1,
     "stages": [
       {
         "img": "images/setting_entrance_spawn_off.png",
         "img_mods": "@disabled",
-        "codes": "setting_entrance_spawn,setting_entrance_spawn_off"
+        "codes": "setting_entrance_spawn_off"
       },
       {
-        "img": "images/setting_entrance_spawn_shuffle.png",
-        "codes": "setting_entrance_spawn,setting_entrance_spawn_shuffle",
-        "inherits_codes": false
+        "img": "images/setting_entrance_spawn_child.png",
+        "codes": "setting_entrance_spawn_child",
+        "inherit_codes": false
+      },
+      {
+        "img": "images/setting_entrance_spawn_adult.png",
+        "codes": "setting_entrance_spawn_adult",
+        "inherit_codes": false
+      },
+      {
+        "img": "images/setting_entrance_spawn_both.png",
+        "codes": "setting_entrance_spawn_child,setting_entrance_spawn_adult",
+        "inherit_codes": false
       }
     ]
   },
@@ -543,7 +571,7 @@
     ]
   },
   {
-    "name": "Shuffle Medigoron & Carpet Salesman",
+    "name": "Shuffle Expensive Merchants",
     "type": "progressive",
     "allow_disabled": false,
     "loop": true,
@@ -556,6 +584,24 @@
       {
         "img": "images/setting_shuffle_merchants_yes.png",
         "codes": "setting_shuffle_merchants,setting_shuffle_merchants_yes",
+        "inherit_codes": false
+      }
+    ]
+  },
+  {
+    "name": "Shuffle Frog Song Rupees",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "stages": [
+      {
+        "img": "images/setting_shuffle_frogs_no.png",
+        "img_mods": "@disabled",
+        "codes": "setting_shuffle_frogs,setting_shuffle_frogs_no"
+      },
+      {
+        "img": "images/setting_shuffle_frogs_yes.png",
+        "codes": "setting_shuffle_frogs,setting_shuffle_frogs_yes",
         "inherit_codes": false
       }
     ]
@@ -673,6 +719,24 @@
     ]
   },
   {
+    "name": "Plant Magic Beans",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "stages": [
+      {
+        "img": "images/setting_plant_beans.png",
+        "img_mods": "@disabled",
+        "codes": "setting_plant_beans,setting_plant_beans_off"
+      },
+      {
+        "img": "images/setting_plant_beans.png",
+        "codes": "setting_plant_beans,setting_plant_beans_on",
+        "inherit_codes": false
+      }
+    ]
+  },
+  {
     "name": "Hints",
     "type": "progressive",
     "allow_disabled": false,
@@ -730,6 +794,24 @@
       {
         "img": "images/setting_damage_ohko.png",
         "codes": "setting_damage,setting_damage_ohko",
+        "inherit_codes": false
+      }
+    ]
+  },
+  {
+    "name": "Blue Fire Arrows",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "stages": [
+      {
+        "img": "images/setting_blue_fire_arrows.png",
+        "img_mods": "@disabled",
+        "codes": "setting_blue_fire_arrows,setting_blue_fire_arrows_off"
+      },
+      {
+        "img": "images/setting_blue_fire_arrows.png",
+        "codes": "setting_blue_fire_arrows,setting_blue_fire_arrows_on",
         "inherit_codes": false
       }
     ]

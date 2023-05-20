@@ -9,7 +9,7 @@ as well as all memory watches assigned to EmoTracker.
 ]]
 
 -- Configuration --------------------------------------
-AUTOTRACKER_DEBUG_LEVEL = DBG_NORMAL
+AUTOTRACKER_DEBUG_LEVEL = DBG_ERROR
 -------------------------------------------------------
 
 function autotracker_debug(str, level)
