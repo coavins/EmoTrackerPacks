@@ -86,6 +86,8 @@ When starting a new game, you should make sure that your tracker settings are co
 
 - Master Quest dungeon checks
 - Which prize is awarded by each dungeon
+- Frog Song rupees
+- Granny's blue potion
 - Whether the scarecrow's song is available
 - Captures for spawn and entrance randomizer
 - At which song location each song was received
