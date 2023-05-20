@@ -1,5 +1,30 @@
 # Changelog
 
+## 3.9.0.0
+
+- added `Shuffle Gerudo Valley River Exit` setting
+- added separate captures for each small and boss key
+- updated `user_presets`
+
+## 3.8.0.0
+
+- fixed closed DoT logic for `DMT Freestanding PoH`
+- changed `Randomize Spawns` setting to have separate options for child/adult/both
+- added `Shuffle Frog Song Rupees` setting
+- added `Blue Fire Arrows` setting
+- added granny's blue potion to `Shuffle Expensive Merchants` setting
+- added `Dungeon Boss Shortcuts` setting
+- changed layouts to accomodate smaller resolutions better
+  - moved pinned locations between items and map in horizontal layout
+  - added scrollbar to pinned locations in horizontal layout
+- added `Plant Magic Beans` setting and removed bean planting `user_setting`
+- updated `user_presets`
+
+## 3.7.3.0
+
+- updated `user_presets`
+- added back left click behavior to free reward when `ALTAR_QUICK_MARK` user setting is off
+
 ## 3.7.2.0
 
 - added ability to load boolean settings for `user_presets`
