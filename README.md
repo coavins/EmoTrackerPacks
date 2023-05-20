@@ -2,8 +2,8 @@
 
 ### [Download latest version](https://github.com/coavins/EmoTrackerPacks/releases)
 
-![Base version](https://img.shields.io/badge/base-v3.7.2.0-blue)
-![Autotracker version](https://img.shields.io/badge/auto-v2-red)
+![Base version](https://img.shields.io/badge/base-v3.9.0.0-blue)
+![Autotracker version](https://img.shields.io/badge/auto-v3-red)
 ![Test Status](https://github.com/coavins/EmoTrackerPacks/workflows/tests/badge.svg)
 
 ## About this fork
@@ -18,9 +18,9 @@ Huge thanks to [RiptideSage](https://github.com/RiptideSage) for making this pro
 
 ## Contact
 
-If you encounter a problem with the autotracker, please create an issue in this repository or reach out to me via email or Matrix chat with the addresses on my profile.
+If you encounter a problem with the autotracker, please create an issue in this repository.
 
-If you're having trouble with basic use of the tracker in general, you might want to check out the [upstream repository](https://github.com/Hamsda/EmoTrackerPacks).
+If you're having trouble with basic use of the tracker in general, you might want to check out [Hamsda's repository](https://github.com/Hamsda/EmoTrackerPacks).
 
 # Setup
 
@@ -106,7 +106,7 @@ Thanks to [RiptideSage](https://github.com/RiptideSage/OoT-CompletedChecks) who 
 
 Thanks to [codemann8](https://github.com/codemann8/alttpr_codetracker_codemann8), whose LTTP pack showed me how to write scripts for EmoTracker.
 
-I also heavily referenced the following OOT resources during development. Maybe they will be useful to you too.
+I also referenced the following OOT resources during development.
 
 - https://docs.google.com/spreadsheets/d/1lh8JcUcuXg7GR4DTWMhmfk42Y0H6nJvUg-zRn8-8bPk
 - https://tcrf.net/Proto:The_Legend_of_Zelda:_Ocarina_of_Time_Master_Quest/Event_Editor
