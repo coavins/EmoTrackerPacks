@@ -426,6 +426,7 @@ function updateFromAutotrackerContext(segment)
   InvalidateReadCaches()
 
   updateMedalList(segment)
+  updateDungeonIsMQ(segment)
 end
 
 function findAutotrackerContext(segment)

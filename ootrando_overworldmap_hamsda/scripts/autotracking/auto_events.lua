@@ -190,9 +190,12 @@ function updateDungeonIsMQ(segment)
   end
 
   autotracker_debug("read CFG_DUNGEON_IS_MQ data", DBG_DETAIL)
+
+  local mq_offset_v4 = 0x2E
+  local mq_address = ADDR_AUTOTRACKER_CONTEXT + mq_offset_v4
   
   for k,_ in pairs(CFG_DUNGEON_IS_MQ) do
-    local value = ReadU8(segment, 0x80400CFA  + (k - 1))
+    local value = ReadU8(segment, mq_address  + (k - 1))
     local newSetting = (value ~= 0)
     CFG_DUNGEON_IS_MQ[k] = newSetting
   end
