@@ -129,7 +129,7 @@ local function updateUsedKeysFromDataAndFlags(data, code, flags)
   if item then
     local cache = KEY_CACHE[code]
     local keysUsed = 0
-    
+
     -- get count of keys used
     for i = 1, #flags do
       local bitmask = 0x1 << flags[i]
@@ -137,6 +137,12 @@ local function updateUsedKeysFromDataAndFlags(data, code, flags)
       if data & bitmask ~= 0 then
         keysUsed = keysUsed + 1
       end
+    end
+
+    -- if using fast fortress, we technically own three keys from the start
+    -- hamsda expects us to pretend there is only one key to get
+    if code == 'thsmall' and has("gerudo_fortress_fast") and keysUsed >= 3 then
+      keysUsed = keysUsed - 3
     end
 
     -- always live update the held keys here
