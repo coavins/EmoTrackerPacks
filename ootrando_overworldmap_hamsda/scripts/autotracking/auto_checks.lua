@@ -69,7 +69,8 @@ end
 
 local function updateDungeonPrizeFromDataAndFlags(data, code, flags)
   local item = Tracker:FindObjectForCode(code)
-  if item then
+  local medallion = item.ItemState
+  if medallion then
     local won = true
 
     for i = 1, #flags do
@@ -80,14 +81,17 @@ local function updateDungeonPrizeFromDataAndFlags(data, code, flags)
       end
     end
 
-    local isActive = item:Get("active")
-
-    if isActive ~= won then
-      if won then autotracker_debug(string.format('Y %s', item.Name))
-      else        autotracker_debug(string.format('N %s', item.Name))
+    if medallion:getProperty("active") ~= won then
+      if won then
+        autotracker_debug(string.format('Y %s', item.Name))
+        local value = CFG_DUNGEON_REWARDS[getIntForDungeonRewardCode(code)]
+        local stage = getMedallionStageForDungeonReward(value)
+        medallion:setProperty("stage", stage)
+      else
+        autotracker_debug(string.format('N %s', item.Name))
       end
 
-      item:Set("active", won)
+      medallion:setProperty("active", won)
     end
   else
     autotracker_debug(string.format('Unable to find item by code: %s', code), DBG_ERROR)
@@ -405,6 +409,39 @@ function updateFromSaveContextOverworld2(segment)
   local maxIndex = 0x65
 
   updateFromSaveContextWithLimits(segment, minIndex, maxIndex)
+end
+
+function updateFromAutotrackerContext(segment)
+  if has('setting_racemode_on') or not AUTOTRACKER_ENABLE_LOCATION_TRACKING or not isInGame() then
+    return true
+  end
+
+  autotracker_debug(string.format("read from autotracker context"), DBG_DETAIL)
+
+  InvalidateReadCaches()
+
+  updateMedalList(segment)
+end
+
+function findAutotrackerContext(segment)
+  autotracker_debug("read autotracker context start position", DBG_DETAIL)
+
+  InvalidateReadCaches()
+
+  -- find autotracker context
+  local autotracker_ctx_addr = ReadU32(segment, 0x8040000C)
+
+  -- we found the autotracker context address
+  if ADDR_AUTOTRACKER_CONTEXT == 0x0 and autotracker_ctx_addr ~= 0x0 then
+    autotracker_debug(string.format('Autotracker context found at %x', autotracker_ctx_addr))
+
+    -- set global
+    ADDR_AUTOTRACKER_CONTEXT = autotracker_ctx_addr
+
+    -- add memory watch
+    autotracker_debug('Adding memory watch for autotracker context')
+    ScriptHost:AddMemoryWatch("Rando Autotracker Context", ADDR_AUTOTRACKER_CONTEXT, 0x11F, updateFromAutotrackerContext)
+  end
 end
 
 function updateShopsFromSaveContext(segment)
