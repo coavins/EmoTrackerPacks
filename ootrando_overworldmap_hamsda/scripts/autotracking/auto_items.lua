@@ -604,10 +604,6 @@ function updateMedalList(segment)
     return true
   end
 
-  if not isInGame() then
-    return false
-  end
-
   autotracker_debug("read medallion data", DBG_DETAIL)
 
   local rewards_offset_v4 = 0x20

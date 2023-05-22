@@ -412,7 +412,7 @@ function updateFromSaveContextOverworld2(segment)
 end
 
 function updateFromAutotrackerContext(segment)
-  if has('setting_racemode_on') or not AUTOTRACKER_ENABLE_LOCATION_TRACKING or not isInGame() then
+  if has('setting_racemode_on') or not AUTOTRACKER_ENABLE_LOCATION_TRACKING then
     return true
   end
 
