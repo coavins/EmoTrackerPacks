@@ -217,17 +217,33 @@ function updateCheckFromDataAndFlags(data, code, flags, allowPartial)
   end
 end
 
+local function scene_is_dungeon(scene_index)
+  if scene_index >= 0x00 and scene_index <= 0x0D then
+    return true
+  else
+    return false
+  end
+end
+
+local function scene_is_mq_dungeon(scene_index)
+  local i = getIntForSceneIndex(scene_index)
+  if scene_is_dungeon(scene_index) and CFG_DUNGEON_IS_MQ[i] then
+    return true
+  else
+    return false
+  end
+end
+
 -- Offsets for scenes can be found here
 -- https://wiki.cloudmodding.com/oot/Scene_Table/NTSC_1.0
 -- Each scene is 0x1c bits long, chests at 0x0, switches at 0x4, collectibles at 0xc
 local function updateSceneFromSaveContext(segment, scene_index)
   local checks = scenes[scene_index]
-  if scene_index >= 0x00 and scene_index <= 0x0D then
-    if CFG_DUNGEON_IS_MQ[getIntForSceneIndex(scene_index)] then
-      checks = scenesMQ[scene_index]
-    end
+
+  if scene_is_mq_dungeon(scene_index) then
+    checks = scenesMQ[scene_index]
   end
-  
+
   if not checks then
     return
   end
@@ -515,11 +531,11 @@ function updateChestsFromGlobalContext(segment)
   local scene_data  = LiveReadU32(ADDR_CURRENT_CHEST_FLAGS)
 
   local checks = scenes[scene_index]
-  if scene_index >= 0x00 and scene_index <= 0x0D then
-    if CFG_DUNGEON_IS_MQ[getIntForSceneIndex(scene_index)] then
-      checks = scenesMQ[scene_index]
-    end
+
+  if scene_is_mq_dungeon(scene_index) then
+    checks = scenesMQ[scene_index]
   end
+
   if checks then
     autotracker_debug(string.format("read live chest data for scene %x: %x", scene_index, scene_data), DBG_DETAIL)
     updateSceneTypeFromGlobalContext(scene_data, checks, 'chest')
@@ -542,11 +558,11 @@ function updateCollectionsFromGlobalContext(segment)
   local scene_data  = LiveReadU32(ADDR_CURRENT_COLLECTION_FLAGS)
 
   local checks = scenes[scene_index]
-  if scene_index >= 0x00 and scene_index <= 0x0D then
-    if CFG_DUNGEON_IS_MQ[getIntForSceneIndex(scene_index)] then
-      checks = scenesMQ[scene_index]
-    end
+
+  if scene_is_mq_dungeon(scene_index) then
+    checks = scenesMQ[scene_index]
   end
+
   if checks then
     autotracker_debug(string.format("read live collection data for scene %x: %x", scene_index, scene_data), DBG_DETAIL)
     updateSceneTypeFromGlobalContext(scene_data, checks, 'ground')
@@ -571,11 +587,11 @@ function updateSwitchesFromGlobalContext(segment)
   local scene_data  = LiveReadU32(ADDR_CURRENT_SWITCH_FLAGS)
 
   local checks = scenes[scene_index]
-  if scene_index >= 0x00 and scene_index <= 0x0D then
-    if CFG_DUNGEON_IS_MQ[getIntForSceneIndex(scene_index)] then
-      checks = scenesMQ[scene_index]
-    end
+
+  if scene_is_mq_dungeon(scene_index) then
+    checks = scenesMQ[scene_index]
   end
+
   if checks then
     autotracker_debug(string.format("read live switch data for scene %x: %x", scene_index, scene_data), DBG_DETAIL)
     updateSceneTypeFromGlobalContext(scene_data, checks, 'magic')
