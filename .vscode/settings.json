@@ -1,0 +1,8 @@
+{
+	"Lua.diagnostics.globals": [
+		"ScriptHost",
+		"describe",
+		"before_each",
+		"it"
+	]
+}
