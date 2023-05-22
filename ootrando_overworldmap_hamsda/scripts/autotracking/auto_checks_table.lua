@@ -379,7 +379,7 @@ scenes[0x57] = {
  ,{type = 'ground', code = '@LH Lab Tower/LH Freestanding PoH', flags = {0x1E}}
 
  ,{type = 'plant', code = 'bean_lake_no', flags = {0x1}}
-   
+
 }
 
 scenes[0x58] = {
@@ -417,7 +417,7 @@ scenes[0x5C] = {
  ,{type = 'chest', code = '@Spirit Temple/Mirror Shield Chest'   , flags = {0x09}}
 
  ,{type = 'ground', code = '@Colossus Arch/Colossus Freestanding PoH', flags = {0xD}}
-   
+
  ,{type = 'plant', code = 'bean_colossus_no', flags = {0x18}}
 }
 
@@ -427,7 +427,7 @@ scenes[0x5D] = {
 
 scenes[0x5E] = {
   {type = 'chest', code = '@Wasteland Structure/Wasteland Chest', flags = {0x00}}
-   
+
  ,{type = 'ground', code = '@Wasteland Bombchu Salesman/Pay 200', flags = {0x01}}
 }
 

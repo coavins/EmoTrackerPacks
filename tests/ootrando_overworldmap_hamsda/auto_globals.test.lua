@@ -16,7 +16,7 @@ describe("auto_globals.lua", function()
 
     local expected = 0x08
     local actual   = ReadU8(segment, address)
-  
+
     assert.are.equal(expected, actual)
   end)
 
@@ -28,7 +28,7 @@ describe("auto_globals.lua", function()
 
     local expected = 0x0800
     local actual   = ReadU16(segment, address)
-  
+
     assert.are.equal(expected, actual)
   end)
 
@@ -40,7 +40,7 @@ describe("auto_globals.lua", function()
 
     local expected = data
     local actual   = ReadU32(segment, address)
-  
+
     assert.are.equal(expected, actual)
   end)
 

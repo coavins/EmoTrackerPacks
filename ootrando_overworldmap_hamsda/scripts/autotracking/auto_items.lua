@@ -608,7 +608,7 @@ function updateMedalList(segment)
 
   local rewards_offset_v4 = 0x20
   local rewards_address = ADDR_AUTOTRACKER_CONTEXT + rewards_offset_v4
-  
+
   local sum = 0
 
   for k,_ in pairs(CFG_DUNGEON_REWARDS) do
@@ -655,7 +655,7 @@ function updateQuestFromMemorySegment(segment)
   updateSongFromByteAndFlag(segment        , "storm"     , 0x8011A675, 0x02)
   updateToggleItemFromByteAndFlag(segment  , "agony"     , 0x8011A675, 0x20)
   updateToggleItemFromByteAndFlag(segment  , "gerudocard", 0x8011A675, 0x40)
-  
+
   updateSongFromByteAndFlag(segment        , "serenade"  , 0x8011A676, 0x01)
   updateSongFromByteAndFlag(segment        , "requiem"   , 0x8011A676, 0x02)
   updateSongFromByteAndFlag(segment        , "nocturne"  , 0x8011A676, 0x04)

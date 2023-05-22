@@ -27,7 +27,7 @@ local function updatePlantedBeanFromDataAndFlags(data, code, flags)
       plantedStage = 0
     end
   end
-  
+
   -- only do the following if we are going from unplanted to planted
   if plantedStage ~= 0 and not has_value(BEANS_USED, code) then
     -- store in cache that we planted this bean
@@ -46,7 +46,7 @@ local function updatePlantedBeanFromDataAndFlags(data, code, flags)
       local item = Tracker:FindObjectForCode('beans')
       if item then
         if item.AcquiredCount ~= count then
-          
+
         end
 
         item.AcquiredCount = count
@@ -75,7 +75,7 @@ local function updateDungeonPrizeFromDataAndFlags(data, code, flags)
 
     for i = 1, #flags do
       local bitmask = 0x1 << flags[i]
-  
+
       if data & bitmask == 0 then -- any missing flag means it's not acquired
         won = false
       end
@@ -456,7 +456,7 @@ function updateShopsFromSaveContext(segment)
   end
 
   autotracker_debug("read shops from save context", DBG_DETAIL)
-  
+
   InvalidateReadCaches()
 
   updateShopCheck(segment, '@Market Potion Shop/Item 1' , 0x0, 0x0)

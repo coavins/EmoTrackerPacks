@@ -117,7 +117,7 @@ end
 
 function getIntForDungeonRewardCode(code)
   local currentStage = 1
-  if     code == "deku"     then currentStage = 1 
+  if     code == "deku"     then currentStage = 1
   elseif code == "dodongo"  then currentStage = 2
   elseif code == "jabu"     then currentStage = 3
   elseif code == "forest"   then currentStage = 4
