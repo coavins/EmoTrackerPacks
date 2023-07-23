@@ -4,6 +4,7 @@
   "package_version": "3.9.0.0",
   "package_uid": "ootrando_overworldmap_hamsda_coavins",
   "platform": "snes",
+  "platform_override": "n64",
   "author": "Hamsda, coavins",
   "variants": {
     "standard": {
