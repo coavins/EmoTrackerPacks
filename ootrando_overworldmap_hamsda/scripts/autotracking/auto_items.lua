@@ -622,10 +622,12 @@ function updateMedalList(segment)
   local reward = 36 - sum
 
   local item = Tracker:FindObjectForCode("free")
-  local medallion = item.ItemState
-  if medallion then
-    local stage = getMedallionStageForDungeonReward(reward)
-    medallion:setProperty("stage", stage)
+  if item then
+    local medallion = item.ItemState
+    if medallion then
+      local stage = getMedallionStageForDungeonReward(reward)
+      medallion:setProperty("stage", stage)
+    end
   end
 end
 

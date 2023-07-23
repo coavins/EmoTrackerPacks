@@ -69,32 +69,37 @@ end
 
 local function updateDungeonPrizeFromDataAndFlags(data, code, flags)
   local item = Tracker:FindObjectForCode(code)
-  local medallion = item.ItemState
-  if medallion then
-    local won = true
-
-    for i = 1, #flags do
-      local bitmask = 0x1 << flags[i]
-
-      if data & bitmask == 0 then -- any missing flag means it's not acquired
-        won = false
-      end
-    end
-
-    if medallion:getProperty("active") ~= won then
-      if won then
-        autotracker_debug(string.format('Y %s', item.Name))
-        local value = CFG_DUNGEON_REWARDS[getIntForDungeonRewardCode(code)]
-        local stage = getMedallionStageForDungeonReward(value)
-        medallion:setProperty("stage", stage)
-      else
-        autotracker_debug(string.format('N %s', item.Name))
-      end
-
-      medallion:setProperty("active", won)
-    end
-  else
+  if not item then
     autotracker_debug(string.format('Unable to find item by code: %s', code), DBG_ERROR)
+    return
+  end
+  local medallion = item.ItemState
+  if not medallion then
+    autotracker_debug(string.format('Unable to find ItemState on item: %s', code), DBG_ERROR)
+    return
+  end
+  
+  local won = true
+
+  for i = 1, #flags do
+    local bitmask = 0x1 << flags[i]
+
+    if data & bitmask == 0 then -- any missing flag means it's not acquired
+      won = false
+    end
+  end
+
+  if medallion:getProperty("active") ~= won then
+    if won then
+      autotracker_debug(string.format('Y %s', item.Name))
+      local value = CFG_DUNGEON_REWARDS[getIntForDungeonRewardCode(code)]
+      local stage = getMedallionStageForDungeonReward(value)
+      medallion:setProperty("stage", stage)
+    else
+      autotracker_debug(string.format('N %s', item.Name))
+    end
+
+    medallion:setProperty("active", won)
   end
 end
 
@@ -249,7 +254,7 @@ local function updateSceneFromSaveContext(segment, scene_index)
     elseif type == 'cow'    then updateCheckFromDataAndFlags(collectibleData, code, flags, false)
     elseif type == 'magic'  then updateCheckFromDataAndFlags(switchData     , code, flags, false)
     elseif type == 'prize'  then updateDungeonPrizeFromDataAndFlags(collectibleData, code, flags)
-    elseif type == 'plant'  then updatePlantedBeanFromDataAndFlags(switchData, code, flags, false)
+    elseif type == 'plant'  then updatePlantedBeanFromDataAndFlags(switchData, code, flags)
     elseif type == 'keys' -- keys are only tracked when keysanity variant is used
         and HAS_KEYS then
       updateUsedKeysFromDataAndFlags(switchData  , code, flags)

@@ -89,9 +89,11 @@ function isInGame()
   local gameMode = AutoTracker:ReadU8(0x8011B92F)
   -- game mode indicates normal play
   if gameMode ~= 0 and gameMode ~= 3 then
+    autotracker_debug('game mode is wrong', DBG_DETAIL)
     return false
   -- validation string is not present, no file is loaded
   elseif AutoTracker:ReadU8(0x8011A5EC) == 0 then
+    autotracker_debug('validation string not present', DBG_DETAIL)
     return false
   -- we must be in game, so RAM is safe to read
   else
