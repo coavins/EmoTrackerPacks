@@ -381,19 +381,24 @@ end
 
 local function updateSongFromByteAndFlag(segment, code, address, flag)
   local songItem = Tracker:FindObjectForCode(code)
-  local song = songItem.ItemState
-  if song then
-    local data = ReadU8(segment, address)
-    local newSetting = (data & flag ~= 0)
-
-    if song:getProperty("active") ~= newSetting then
-      if newSetting then autotracker_debug(string.format("Y %s", songItem.Name))
-      else               autotracker_debug(string.format("N %s", songItem.Name))
-      end
-      song:setProperty("active", newSetting)
-    end
-  else
+  if not songItem then
     autotracker_debug(string.format('Unable to find item by code: %s', code), DBG_ERROR)
+    return
+  end
+
+  local song = songItem.ItemState
+  if not song then
+    autotracker_debug(string.format('Unable to find ItemState on item : %s', code), DBG_ERROR)
+  end
+
+  local data = ReadU8(segment, address)
+  local newSetting = (data & flag ~= 0)
+
+  if song:getProperty("active") ~= newSetting then
+    if newSetting then autotracker_debug(string.format("Y %s", songItem.Name))
+    else               autotracker_debug(string.format("N %s", songItem.Name))
+    end
+    song:setProperty("active", newSetting)
   end
 end
 

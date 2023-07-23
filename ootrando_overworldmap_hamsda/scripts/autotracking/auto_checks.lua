@@ -512,7 +512,7 @@ function updateChestsFromGlobalContext(segment)
 
   local transition_data = LiveReadU32(0x0801DA668)
   if transition_data ~= 0x01010100 then
-    autotracker_debug('abort read of live data due to scene transition', DBG_DETAIL)
+    autotracker_debug(string.format('abort read of live data due to scene transition: %x', transition_data), DBG_DETAIL)
     return true
   end
 
