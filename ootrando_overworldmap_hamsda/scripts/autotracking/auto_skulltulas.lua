@@ -40,8 +40,12 @@ end
 -- called by memory watch
 function updateSkulltulasFromMemorySegment(segment)
   if not HAS_MAP then return true end
-  if has('setting_racemode_on') or not AUTOTRACKER_ENABLE_LOCATION_TRACKING or not isInGame() then
+  if has('setting_racemode_on') or not AUTOTRACKER_ENABLE_LOCATION_TRACKING then
     return true
+  end
+
+  if not isInGame() then
+    return false
   end
 
   autotracker_debug('read skulltula data', DBG_DETAIL)

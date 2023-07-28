@@ -498,8 +498,12 @@ end
 -- ==================
 
 function updateMagicMeterFromMemorySegment(segment)
-  if has('setting_racemode_on') or not AUTOTRACKER_ENABLE_ITEM_TRACKING or not isInGame() then
+  if has('setting_racemode_on') or not AUTOTRACKER_ENABLE_ITEM_TRACKING then
     return true
+  end
+
+  if not isInGame() then
+    return false
   end
 
   autotracker_debug("read magic meter data", DBG_DETAIL)
@@ -510,8 +514,12 @@ function updateMagicMeterFromMemorySegment(segment)
 end
 
 function updateBiggoronFromMemorySegment(segment)
-  if has('setting_racemode_on') or not AUTOTRACKER_ENABLE_ITEM_TRACKING or not isInGame() then
+  if has('setting_racemode_on') or not AUTOTRACKER_ENABLE_ITEM_TRACKING then
     return true
+  end
+
+  if not isInGame() then
+    return false
   end
 
   autotracker_debug("read biggoron data", DBG_DETAIL)
@@ -687,8 +695,12 @@ function updateQuestFromMemorySegment(segment)
 end
 
 function updateKeysFromMemorySegment(segment)
-  if has('setting_racemode_on') or not AUTOTRACKER_ENABLE_ITEM_TRACKING or not isInGame() then
+  if has('setting_racemode_on') or not AUTOTRACKER_ENABLE_ITEM_TRACKING then
     return true
+  end
+
+  if not isInGame() then
+    return false
   end
 
   autotracker_debug("read key data", DBG_DETAIL)

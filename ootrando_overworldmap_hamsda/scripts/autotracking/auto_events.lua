@@ -181,8 +181,12 @@ end
 -- ==================
 
 function updateEventsFromMemorySegment(segment)
-  if has('setting_racemode_on') or not AUTOTRACKER_ENABLE_LOCATION_TRACKING or not isInGame() then
+  if has('setting_racemode_on') or not AUTOTRACKER_ENABLE_LOCATION_TRACKING then
     return true
+  end
+
+  if not isInGame() then
+    return false
   end
 
   autotracker_debug("read events from save context", DBG_DETAIL)

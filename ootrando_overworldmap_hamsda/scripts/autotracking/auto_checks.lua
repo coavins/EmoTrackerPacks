@@ -343,8 +343,12 @@ end
 -- ==================
 
 function updateFromSaveContextDungeon1(segment)
-  if has('setting_racemode_on') or not AUTOTRACKER_ENABLE_LOCATION_TRACKING or not isInGame() then
+  if has('setting_racemode_on') or not AUTOTRACKER_ENABLE_LOCATION_TRACKING then
     return true
+  end
+
+  if not isInGame() then
+    return false
   end
 
   local minIndex = 0x00
@@ -354,8 +358,12 @@ function updateFromSaveContextDungeon1(segment)
 end
 
 function updateFromSaveContextDungeon2(segment)
-  if has('setting_racemode_on') or not AUTOTRACKER_ENABLE_LOCATION_TRACKING or not isInGame() then
+  if has('setting_racemode_on') or not AUTOTRACKER_ENABLE_LOCATION_TRACKING then
     return true
+  end
+
+  if not isInGame() then
+    return false
   end
 
   local minIndex = 0x03
@@ -365,8 +373,12 @@ function updateFromSaveContextDungeon2(segment)
 end
 
 function updateFromSaveContextDungeon3(segment)
-  if has('setting_racemode_on') or not AUTOTRACKER_ENABLE_LOCATION_TRACKING or not isInGame() then
+  if has('setting_racemode_on') or not AUTOTRACKER_ENABLE_LOCATION_TRACKING then
     return true
+  end
+
+  if not isInGame() then
+    return false
   end
 
   local minIndex = 0x06
@@ -376,8 +388,12 @@ function updateFromSaveContextDungeon3(segment)
 end
 
 function updateFromSaveContextDungeon4(segment)
-  if has('setting_racemode_on') or not AUTOTRACKER_ENABLE_LOCATION_TRACKING or not isInGame() then
+  if has('setting_racemode_on') or not AUTOTRACKER_ENABLE_LOCATION_TRACKING then
     return true
+  end
+
+  if not isInGame() then
+    return false
   end
 
   local minIndex = 0x09
@@ -387,8 +403,12 @@ function updateFromSaveContextDungeon4(segment)
 end
 
 function updateFromSaveContextDungeon5(segment)
-  if has('setting_racemode_on') or not AUTOTRACKER_ENABLE_LOCATION_TRACKING or not isInGame() then
+  if has('setting_racemode_on') or not AUTOTRACKER_ENABLE_LOCATION_TRACKING then
     return true
+  end
+
+  if not isInGame() then
+    return false
   end
 
   local minIndex = 0x0C
@@ -398,8 +418,12 @@ function updateFromSaveContextDungeon5(segment)
 end
 
 function updateFromSaveContextOverworld1(segment)
-  if has('setting_racemode_on') or not AUTOTRACKER_ENABLE_LOCATION_TRACKING or not isInGame() then
+  if has('setting_racemode_on') or not AUTOTRACKER_ENABLE_LOCATION_TRACKING then
     return true
+  end
+
+  if not isInGame() then
+    return false
   end
 
   local minIndex = 0x34
@@ -412,8 +436,12 @@ function updateFromSaveContextOverworld1(segment)
 end
 
 function updateFromSaveContextOverworld2(segment)
-  if has('setting_racemode_on') or not AUTOTRACKER_ENABLE_LOCATION_TRACKING or not isInGame() then
+  if has('setting_racemode_on') or not AUTOTRACKER_ENABLE_LOCATION_TRACKING then
     return true
+  end
+
+  if not isInGame() then
+    return false
   end
 
   local minIndex = 0x4D
@@ -425,6 +453,10 @@ end
 function updateFromAutotrackerContext(segment)
   if has('setting_racemode_on') or not AUTOTRACKER_ENABLE_LOCATION_TRACKING then
     return true
+  end
+
+  if not isInGame() then
+    return false
   end
 
   autotracker_debug(string.format("read from autotracker context"), DBG_DETAIL)
@@ -456,8 +488,12 @@ function findAutotrackerContext(segment)
 end
 
 function updateShopsFromSaveContext(segment)
-  if has('setting_racemode_on') or not AUTOTRACKER_ENABLE_LOCATION_TRACKING or not isInGame() then
+  if has('setting_racemode_on') or not AUTOTRACKER_ENABLE_LOCATION_TRACKING then
     return true
+  end
+
+  if not isInGame() then
+    return false
   end
 
   autotracker_debug("read shops from save context", DBG_DETAIL)
@@ -499,8 +535,12 @@ function updateShopsFromSaveContext(segment)
 end
 
 function updateChestsFromGlobalContext(segment)
-  if has('setting_racemode_on') or not AUTOTRACKER_ENABLE_LOCATION_TRACKING or not isInGame() then
+  if has('setting_racemode_on') or not AUTOTRACKER_ENABLE_LOCATION_TRACKING then
     return true
+  end
+
+  if not isInGame() then
+    return false
   end
 
   --[[
@@ -527,8 +567,12 @@ function updateChestsFromGlobalContext(segment)
 end
 
 function updateCollectionsFromGlobalContext(segment)
-  if has('setting_racemode_on') or not AUTOTRACKER_ENABLE_LOCATION_TRACKING or not isInGame() then
+  if has('setting_racemode_on') or not AUTOTRACKER_ENABLE_LOCATION_TRACKING then
     return true
+  end
+
+  if not isInGame() then
+    return false
   end
 
   -- see chest function for more details on this
@@ -551,8 +595,12 @@ function updateCollectionsFromGlobalContext(segment)
 end
 
 function updateSwitchesFromGlobalContext(segment)
-  if has('setting_racemode_on') or not AUTOTRACKER_ENABLE_LOCATION_TRACKING or not isInGame() then
+  if has('setting_racemode_on') or not AUTOTRACKER_ENABLE_LOCATION_TRACKING then
     return true
+  end
+
+  if not isInGame() then
+    return false
   end
 
   -- see chest function for more details on this
