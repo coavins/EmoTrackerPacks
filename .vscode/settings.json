@@ -3,6 +3,8 @@
 		"ScriptHost",
 		"describe",
 		"before_each",
-		"it"
+		"it",
+		"ImageReference",
+		"AccessibilityLevel"
 	]
 }
