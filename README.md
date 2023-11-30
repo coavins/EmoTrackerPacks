@@ -26,7 +26,7 @@ If you're having trouble with basic use of the tracker in general, you might wan
 
 ## Requirements
 
-- EmoTracker (tested with 2.3.8.17)
+- EmoTracker (tested with 2.3.8.17) or PopTracker (early beta - very limited functionality)
 - BizHawk (tested with 2.3 through 2.8)
 - [bizhawk-connector](https://github.com/coavins/bizhawk-connector)
 
@@ -46,11 +46,17 @@ You don't have to extract the zip. When EmoTracker is reloaded, this pack should
 
 # Connect to Bizhawk
 
-## Activate autotracker in EmoTracker
+## Enable the autotracker
+
+**Note:** You should configure your tracker settings **before** you connect to the emulator.
+
+### EmoTracker
 
 To activate the autotracker, right-click the robot icon in the lower right corner of EmoTracker and choose "SNES", then "Lua". When the robot turns red or yellow, it is ready.
 
-**Note:** You should make sure that your tracker settings are configured correctly before you connect to the emulator.
+### PopTracker
+
+To activate the autotracker, left-click the word "Lua" in the top left corner of PopTracker. When the text turns yellow, it is waiting for a connection from BizHawk. When the text turns green, it means BizHawk successfully connected and autotracking will begin.
 
 ## Load the connector script in BizHawk
 
