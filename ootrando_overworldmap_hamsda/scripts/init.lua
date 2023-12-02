@@ -14,3 +14,5 @@ ScriptHost:LoadScript("scripts/autotracking/auto_events.lua")
 ScriptHost:LoadScript("scripts/autotracking/auto_skulltulas.lua")
 ScriptHost:LoadScript("scripts/autotracking/auto_globals.lua")
 ScriptHost:LoadScript("scripts/autotracking/autotracking.lua")
+
+update_items()
