@@ -28,19 +28,14 @@ If you're having trouble with basic use of the tracker in general, you might wan
 
 - EmoTracker (tested with 2.3.8.17) or PopTracker (early beta - very limited functionality)
 - BizHawk (tested with 2.3 through 2.8)
-- [bizhawk-connector](https://github.com/coavins/bizhawk-connector)
-
-## Install bizhawk-connector
-
-https://github.com/coavins/bizhawk-connector
-
-Install this script into the Lua folder for Bizhawk.
+- For BizHawk 2.8 and below: [bizhawk-connector](https://github.com/coavins/bizhawk-connector)
+- For BizHawk 2.9: You can use the connector lua from [this site](https://minish-cap.deoxis9001.ovh/en/tracking.html)
 
 ## Install the pack
 
 To manually install or update this pack, download [the latest release](https://github.com/coavins/EmoTrackerPacks/releases) and put the zip file into your EmoTracker packs directory:
 
-`C:\Users\coavins\Documents\EmoTracker\packs`
+`%userprofile%\Documents\EmoTracker\packs`
 
 You don't have to extract the zip. When EmoTracker is reloaded, this pack should appear under "Installed Packages" with (Autotracker) in the name.
 
@@ -60,11 +55,9 @@ To activate the autotracker, left-click the word "Lua" in the top left corner of
 
 ## Load the connector script in BizHawk
 
-In BizHawk, after your ROM is loaded, go to `Tools > Lua Console`. In the new window, go to `Script > Open Script` and navigate to the connector in your Bizhawk lua folder:
+In BizHawk, after your ROM is loaded, go to `Tools > Lua Console`. In the new window, go to `Script > Open Script` and navigate to the `connector.lua` file in your Bizhawk lua folder.
 
-`Lua\bizhawk-connector\connector.lua`
-
-**Note:** When playing with Archipelago, you should load the Archipelago lua *first*.
+**Note:** When playing with Archipelago or multiworld, you should load the Archipelago/multiworld lua *first*.
 
 When the connector.lua script is started, the connection should be established and you should see the robot icon in EmoTracker turn green. After a short delay, autotracking will begin. Items and checks will be marked as soon as you receive them in-game.
 
